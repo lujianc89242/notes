@@ -1,0 +1,23 @@
+gem install execjs
+//if not successful, try 
+// gem sources --add http://rubygems.org/
+// gem sources --? to confirm 
+// gem sources --remove to remove the wrong one\
+
+rails new my_new_application -m http://refinerycms.com/t/3-0-stable
+
+// if something wroing shows up during building
+// Rebuild one
+
+cd my_new_application
+
+	change gemfile
+		a. https => http
+		b. copy 
+			gem 'coffee-script-source', '1.8.0'
+
+			gem 'foundation-rails', '5.4.5'
+
+bundle update
+
+rails s
